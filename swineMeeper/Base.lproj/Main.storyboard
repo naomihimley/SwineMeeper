@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="HomeViewController" customModule="swineMeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,64 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knT-If-WGH">
+                                <rect key="frame" x="10" y="99" width="580" height="395"/>
+                                <connections>
+                                    <segue destination="IL4-WE-rFl" kind="embed" id="Bet-1d-8sT"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roo-gr-s2F">
+                                <rect key="frame" x="285" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="JVT-Qz-fKw"/>
+                                    <constraint firstAttribute="height" constant="30" id="yh1-Gt-i99"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="☺️">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XQC-1w-rof"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="knT-If-WGH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="79" id="5w9-g7-9gH"/>
+                            <constraint firstItem="knT-If-WGH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="Zms-mK-OFP"/>
+                            <constraint firstAttribute="trailing" secondItem="knT-If-WGH" secondAttribute="trailing" constant="10" id="beG-ac-6xG"/>
+                            <constraint firstAttribute="centerX" secondItem="Roo-gr-s2F" secondAttribute="centerX" id="f05-TE-DPU"/>
+                            <constraint firstItem="Roo-gr-s2F" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="p0F-6i-rgZ"/>
+                            <constraint firstAttribute="centerY" secondItem="knT-If-WGH" secondAttribute="centerY" constant="3.5" id="u9u-Oa-Cuf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="boardContainer" destination="knT-If-WGH" id="aXU-Dw-mTf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="242" y="343"/>
+        </scene>
+        <!--Board View Controller-->
+        <scene sceneID="DvB-i6-uTB">
+            <objects>
+                <viewController storyboardIdentifier="BoardViewController" automaticallyAdjustsScrollViewInsets="NO" id="IL4-WE-rFl" customClass="BoardViewController" customModule="swineMeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jee-Yp-Js0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XA4-x2-dDb"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f85-yH-xSl">
+                        <rect key="frame" x="0.0" y="0.0" width="580" height="395"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMH-gd-JGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="343"/>
         </scene>
     </scenes>
 </document>

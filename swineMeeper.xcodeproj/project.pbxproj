@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0A891B11A71D35D0076F1DE /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A891B01A71D35D0076F1DE /* BoardViewController.swift */; };
+		B0A891B31A71DB610076F1DE /* BrickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A891B21A71DB610076F1DE /* BrickButton.swift */; };
+		B0A891B51A71FCF00076F1DE /* GameLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A891B41A71FCF00076F1DE /* GameLogicController.swift */; };
 		B0BEBE701A6F74E6003E714F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEBE6F1A6F74E6003E714F /* AppDelegate.swift */; };
-		B0BEBE721A6F74E6003E714F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEBE711A6F74E6003E714F /* ViewController.swift */; };
+		B0BEBE721A6F74E6003E714F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEBE711A6F74E6003E714F /* HomeViewController.swift */; };
 		B0BEBE751A6F74E6003E714F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BEBE731A6F74E6003E714F /* Main.storyboard */; };
 		B0BEBE771A6F74E6003E714F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BEBE761A6F74E6003E714F /* Images.xcassets */; };
 		B0BEBE7A1A6F74E6003E714F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BEBE781A6F74E6003E714F /* LaunchScreen.xib */; };
@@ -26,10 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0A891B01A71D35D0076F1DE /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		B0A891B21A71DB610076F1DE /* BrickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickButton.swift; sourceTree = "<group>"; };
+		B0A891B41A71FCF00076F1DE /* GameLogicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogicController.swift; sourceTree = "<group>"; };
 		B0BEBE6A1A6F74E6003E714F /* swineMeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swineMeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BEBE6E1A6F74E6003E714F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BEBE6F1A6F74E6003E714F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0BEBE711A6F74E6003E714F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0BEBE711A6F74E6003E714F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0BEBE741A6F74E6003E714F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0BEBE761A6F74E6003E714F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0BEBE791A6F74E6003E714F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				B0BEBE6F1A6F74E6003E714F /* AppDelegate.swift */,
-				B0BEBE711A6F74E6003E714F /* ViewController.swift */,
+				B0BEBE711A6F74E6003E714F /* HomeViewController.swift */,
+				B0A891B01A71D35D0076F1DE /* BoardViewController.swift */,
+				B0A891B21A71DB610076F1DE /* BrickButton.swift */,
+				B0A891B41A71FCF00076F1DE /* GameLogicController.swift */,
 				B0BEBE731A6F74E6003E714F /* Main.storyboard */,
 				B0BEBE761A6F74E6003E714F /* Images.xcassets */,
 				B0BEBE781A6F74E6003E714F /* LaunchScreen.xib */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0BEBE721A6F74E6003E714F /* ViewController.swift in Sources */,
+				B0BEBE721A6F74E6003E714F /* HomeViewController.swift in Sources */,
 				B0BEBE701A6F74E6003E714F /* AppDelegate.swift in Sources */,
+				B0A891B11A71D35D0076F1DE /* BoardViewController.swift in Sources */,
+				B0A891B51A71FCF00076F1DE /* GameLogicController.swift in Sources */,
+				B0A891B31A71DB610076F1DE /* BrickButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				B0BEBE8B1A6F74E6003E714F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0BEBE8C1A6F74E6003E714F /* Build configuration list for PBXNativeTarget "swineMeeperTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				B0BEBE8E1A6F74E6003E714F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
