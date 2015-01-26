@@ -25,5 +25,6 @@ class BoardViewController: UIViewController {
     func tapped(tappedBrick: BrickButton) {
         self.logicController.checkIfTouchingABomb(tappedBrick)
         tappedBrick.updateImage(tappedBrick)
+        self.logicController.isFirstClick = false
     }
 }
